@@ -89,7 +89,7 @@ Follow these steps to set up and run the AI on your local machine.
 When you're finished working, you can deactivate the virtual environment by simply running:
 ```bash
 deactivate
-
+```
 ## Credits & References
 
 * **Base Game:** This project modifies the excellent `pygame-minesweeper` package.
