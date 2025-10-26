@@ -70,7 +70,6 @@ Follow these steps to set up and run the AI on your local machine.
 
 * **Base Game:** This project modifies the excellent `pygame-minesweeper` package.
     * PyPI: [https://pypi.org/project/pygame-minesweeper/](https://pypi.org/project/pygame-minesweeper/)
-    * Original (Archived) Source: [https://github.com/harsilspatel/pygame-minesweeper](https://github.com/harsilspatel/pygame-minesweeper) (Note: The active development seems to have moved or stopped).
 * **AI Inspiration:** The core AI logic using Constraint Programming (PuLP) and the integration technique were inspired by:
     * Alex Brou's YouTube Video: ["I coded the Perfect AI for Minesweeper"](https://youtu.be/gKMZbzl0V7U)
     * Alex Brou's Medium Article: ["The perfect Minesweeper AI: an approach using Linear/Constraint Programming"](https://medium.com/@alexbrou/the-perfect-minesweeper-ai-an-approach-using-linear-constraint-programming-1d4cf8cc8101)
