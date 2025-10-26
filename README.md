@@ -23,28 +23,45 @@ Follow these steps to set up and run the AI on your local machine.
 ### Installation
 
 1.  **Clone the Repository:**
-    Open your terminal and clone this repository:
+    Open your terminal or Command Prompt and clone this repository:
     ```bash
     git clone git@github.com:Aurlaze/minesweeper-ai.git
     cd minesweeper-ai
     ```
     *(Note: The folder name might be `pygame-minesweeper-1.0.11` if you used the tarball)*
 
-2.  **Create and Activate Virtual Environment:**
-    It's crucial to use a virtual environment to manage dependencies.
+2.  **Create Virtual Environment:**
+    Navigate to your project directory and create a virtual environment. It's crucial to use one to manage dependencies.
     ```bash
     # Create the environment (e.g., named 'minesweeper_dev_env')
-    python3 -m venv minesweeper_dev_env
-
-    # Activate the environment (Linux/macOS/WSL)
-    source minesweeper_dev_env/bin/activate
+    python -m venv minesweeper_dev_env
     ```
+    *(Note: On some systems, you might need to use `python3` instead of `python`)*
+
+3.  **Activate Virtual Environment:**
+    You need to activate the environment before installing packages. The command depends on your operating system and shell.
+
+    * **Windows (Command Prompt `cmd.exe`):**
+      ```cmd
+      minesweeper_dev_env\Scripts\activate.bat
+      ```
+
+    * **Windows (PowerShell):**
+      ```powershell
+      .\minesweeper_dev_env\Scripts\Activate.ps1
+      ```
+      *(Note: If you get an error in PowerShell about execution policies, you may need to run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` first.)*
+
+    * **Linux / macOS / WSL (Bash/Zsh):**
+      ```bash
+      source minesweeper_dev_env/bin/activate
+      ```
     Your terminal prompt should now start with `(minesweeper_dev_env)`.
 
-3.  **Install Dependencies (Editable Mode):**
+4.  **Install Dependencies (Editable Mode):**
     This command installs the game, its dependencies (like Pygame and PuLP), and links them to your local source code so your changes take effect. The `--no-build-isolation` flag is needed for compatibility with this older package.
     ```bash
-    # Make sure you are inside the project folder (e.g., minesweeper-ai or pygame-minesweeper-1.0.11)
+    # Make sure you are inside the project folder
     pip install setuptools wheel # Ensure build tools are present
     pip install --no-build-isolation -e .
     pip install pulp # Install the AI's solver dependency
@@ -59,12 +76,19 @@ Follow these steps to set up and run the AI on your local machine.
     # Or: minesweeper intermediate
     # Or: minesweeper expert
     ```
+    *(Note: On Windows, if the `minesweeper` command isn't found directly, you might need to run it as a module: `python -m minesweeper basic`)*
 
 2.  **Make the First Move:**
     Click anywhere on the grid to reveal the initial area. This gives the AI its first clues.
 
 3.  **Activate the AI:**
     Click the **smiley face button** 😃 at the top of the game window. The AI will take over and automatically solve the rest of the board.
+
+### Deactivating the Environment
+
+When you're finished working, you can deactivate the virtual environment by simply running:
+```bash
+deactivate
 
 ## Credits & References
 
